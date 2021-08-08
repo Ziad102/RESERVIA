@@ -52,7 +52,7 @@ margin: auto;
 
 .head nav a {
     padding: 1rem 0;
-    font-weight: 500;
+    font-weight: 400;
     text-align: center;
     transition-duration: 0.1s;
     border-bottom: 3px transparent solid;
@@ -74,7 +74,7 @@ margin: auto;
 
 #headsignup a {
     color: #0065FC;
-    font-weight: 700;
+    font-weight: 550;
 }
 
 /*------------------ Main -------------------------*/
@@ -118,14 +118,14 @@ box-sizing: border-box;
     padding: 0 1.5rem;
     width: 14rem;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: normal;
     font-family: "Raleway","Sans serif";
 }
 
 .searching form button {
     background-color: #0065FC;
     color: white;
-    font-weight: bold;
+    font-weight: normal;
     border: none;
     border-radius: 0 1rem 1rem 0;
     font-family: "Raleway", "Sans serif";
@@ -246,6 +246,16 @@ box-sizing: border-box;
             margin: 0.25rem 0.75rem 0 0.75rem;
         }
 
+        .hostmorePopular h3 {
+            margin: 0.25rem 0.75rem 0 0.75rem;
+        }
+
+
+
+
+
+
+
         .Hostingdiv p,
         .hostmorePopular p {
             margin: 0.25rem 0.75rem 0.25rem 0.75rem;
@@ -311,7 +321,7 @@ box-sizing: border-box;
             display: flex;
             flex-direction: column;
         }
-
+        
         .host_plus {
             flex: 1;
         }
@@ -430,3 +440,216 @@ margin: 1rem 0;
 } 
 
 }
+
+
+
+/*-----------Mobile-----------------------------------------------------------------------*/
+
+@media screen and (max-width: 650px){
+
+
+    .head {
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas: 
+            "logo . button"
+            "navbar navbar navbar";
+        position: relative;
+    }
+
+    #headsignup
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 1rem;
+        width: auto;
+        border-bottom: none;
+    }
+
+    #headsignup a {
+        border-bottom: none;
+    }
+
+        .head li {
+            width: 50%;
+            padding: 0;
+        }
+
+        .head nav a {
+            display: inline-block;
+            border-bottom: 3px #f2f2f2 solid;
+            width: 100%;
+        }
+
+        .head nav a[data-active=true] {
+            border-bottom: 3px #0065FC solid;
+            border-top: none;
+        }
+
+        .head nav a:hover {
+            border-top: none;
+        }
+
+    .searchFormButton {
+        display: none;
+    }
+
+    .Hostingdiv,
+    .activity {
+        grid-template-columns: 1fr;
+    }
+
+    .activity {
+        grid-template-rows: auto repeat(6, 20rem);
+        row-gap: 2rem;
+    }
+
+        .activity h2 {
+            grid-row: 1;
+            grid-column: 1/-1;
+        }
+
+        #one {
+            grid-row: 2;
+            grid-column: 1/-1;
+        }
+
+        #two {
+            grid-row: 3;
+            grid-column: 1/-1;
+        }
+
+        #three {
+            grid-row: 4;
+            grid-column: 1/-1;
+        }
+
+        #four {
+            grid-row: 5;
+            grid-column: 1/-1;
+        }
+
+        #five {
+            grid-row: 6;
+            grid-column: 1/-1;
+        }
+
+        #six {
+            grid-row: 7;
+            grid-column: 1/-1;
+        }
+
+    .footerHead {
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (min-width: 650px) and (max-width:1100px)
+{
+
+    
+    .Hostingdiv,
+    .activity {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .activity {
+        grid-template-rows: auto 12rem 12rem 12rem;
+        row-gap: 2rem;
+    }
+
+        .activity h2 {
+            grid-column: 1/-1;
+        }
+
+        #one {
+            grid-row: 2;
+            grid-column: 1;
+        }
+
+        #two {
+            grid-row: 2;
+            grid-column: 2;
+        }
+
+        #three {
+            grid-row: 3;
+            grid-column: 1;
+        }
+
+        #four {
+            grid-row: 3;
+            grid-column: 2;
+        }
+
+        #five {
+            grid-row: 4;
+            grid-column: 1;
+        }
+
+        #six {
+            grid-row: 4;
+            grid-column: 2;
+        }
+}
+
+@media screen and (max-width: 1100px) {
+
+    .dot {
+        padding: 0;
+    }
+
+    .search {
+        padding: 0 1rem;
+    }
+
+    .header img{
+        margin-left: 1rem;
+    }
+
+    .hosting {
+        display: grid;
+        row-gap: 2rem;
+        grid-template-rows: auto auto;
+    }
+
+
+
+
+
+
+
+        .Hostingdiv {
+            background: none;
+        }
+
+        .Hostingdiv img {
+            height: 14rem;
+        }
+
+
+
+
+
+
+
+        .hostingPopular {
+            grid-row: 1/2;
+            border-radius: 0;
+            grid-template-rows: auto repeat(3, 12rem);
+            grid-template-columns: 1fr;
+        }
+
+    .activity {
+        padding: 2rem;
+    }
+}
+
+@media screen and (min-width: 650px) {
+   
+    .fa-search {
+        display: none;
+    }
+}
+
